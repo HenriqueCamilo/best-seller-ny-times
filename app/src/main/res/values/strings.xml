@@ -3,4 +3,8 @@
 
     <!-- Books -->
     <string name="books_title">Books</string>
+
+    <!-- Book Details Activity -->
+    <string name="books_details_title_lable">Title</string>
+    <string name="books_details_description_lable">Description</string>
 </resources>
