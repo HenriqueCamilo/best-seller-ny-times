@@ -7,6 +7,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.nybooks.data.repository.BooksApiDataSource
 import com.example.nybooks.presentation.base.BaseActivity
 import com.example.nybooks.presentation.details.BookDetailsActivity
 import kotlinx.android.synthetic.main.activity_books.*
@@ -19,7 +20,8 @@ class BooksActivity : BaseActivity() {
 
         setupToolbar(toolbarMain, R.string.books_title)
 
-        val viewModel: BooksViewModel = ViewModelProvider(this).get(BooksViewModel::class.java)
+        val viewModel: BooksViewModel = BooksViewModel.ViewModelFactory(BooksApiDataSource())
+            .create(BooksViewModel::class.java)
 
         viewModel.booksLiveData.observe(this, Observer {
             it?.let { books ->
@@ -34,8 +36,7 @@ class BooksActivity : BaseActivity() {
 
                     }
                     setHasFixedSize(true)
-                    layoutManager =
-                        LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
+                    layoutManager = LinearLayoutManager(this@BooksActivity, RecyclerView.VERTICAL, false)
                 }
             }
         })

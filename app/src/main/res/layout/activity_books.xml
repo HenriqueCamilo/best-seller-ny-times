@@ -30,7 +30,11 @@
             android:id="@+id/recyclerBooks"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:listitem="@layout/item_book" />
+            android:paddingBottom="32dp"
+            android:clipToPadding="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/item_book"
+            tools:itemCount="3"/>
 
         <TextView
             android:id="@+id/textViewError"
