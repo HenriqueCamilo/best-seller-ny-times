@@ -52,7 +52,7 @@ class BooksViewModel(val dataSource: BooksRepository) : ViewModel() {
     }
 
     companion object {
-        private const val VIEW_FLIPPER_BOOKS = 1
+        const val VIEW_FLIPPER_BOOKS = 1
         private const val VIEW_FLIPPER_ERROR = 2
     }
 }
