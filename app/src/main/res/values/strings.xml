@@ -3,8 +3,13 @@
 
     <!-- Books -->
     <string name="books_title">Books</string>
+    <string name="books_error_401">Não autorizado</string>
+    <string name="books_error_400_generic">Erro não tratado</string>
+    <string name="books_error_500_generic">Erro cadastrófico</string>
 
     <!-- Book Details Activity -->
+    <!-- Book Details Activity -->
+    <string name="books_details_title">Book Details</string>
     <string name="books_details_title_lable">Title</string>
     <string name="books_details_description_lable">Description</string>
 </resources>

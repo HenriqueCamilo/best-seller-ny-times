@@ -5,36 +5,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
     tools:context="com.example.nybooks.presentation.details.BookDetailsActivity">
 
+    <include layout="@layout/include_toolbar"/>
+
     <TextView
+        style="@style/MyTextViewLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/books_details_title_lable"
-        android:textStyle="bold"
-        android:textColor="#000" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/books_details_title_lable" />
 
     <TextView
         android:id="@+id/tvDetailsTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         tools:text="LALALA" />
 
     <TextView
+        style="@style/MyTextViewLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
-        android:textStyle="bold"
-        android:text="@string/books_details_description_lable"
-        android:textColor="#000" />
+        android:text="@string/books_details_description_lable" />
 
     <TextView
         android:id="@+id/tvDetailsDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#000"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         tools:text="XEXEXE" />
 
 
